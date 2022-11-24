@@ -19,7 +19,7 @@ The input data need to be a data frame in the long format containing the variabl
 * `t2`: ending time of the interval in record.
 * `s1`: the state of the process at `t1`. The possible values are 1,...,k. 
 * `s2`: the state of the process at `t2`. The possible values are 1,...,k.
-* `A`: binary treatment. The possible values are -1 and 1.
+* `A`: binary treatment variable. The possible values are -1 and 1.
 
 ### Function `itr()`
 
