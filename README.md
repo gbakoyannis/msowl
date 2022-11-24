@@ -79,4 +79,16 @@ The estimated standard error of the value function of the estimated rule can be 
 ```
 > fit$se_V_opt
 ```
+Estimation of the the value function of the latter estimated optimal treatment rule and its standard error using the function `V_d` can be performed as follows:
+```
+> V_d(data=data, w=c(0, 1, 0), tau=3, dec.fun=fit$fit, feat=c("Z1", "Z2"), SE = TRUE)
+```
+Estimation of the the value function of the fixed rule that assigns treatment 1 to everyone, along with its standard error, can be performed as follows:
+```
+> V_d(data=data, w=c(0, 1, 0), tau=3, dec.fun=1, feat=c("Z1", "Z2"), SE = TRUE)
+```
+Estimation of the the value function of the fixed rule that assigns treatment -1 to everyone, along with its standard error, can be performed as follows:
+```
+> V_d(data=data, w=c(0, 1, 0), tau=3, dec.fun=-1, feat=c("Z1", "Z2"), SE = TRUE)
+```
 
