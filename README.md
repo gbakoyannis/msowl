@@ -3,7 +3,7 @@ Estimation of optimal individualized treatment rules with multistate processes v
 
 
 ## Description
-This repository contains R functions for the estimation of optimal individualized treatment rules with multistate processes via outcome weighted learning. These functions also provide the estimated value function of an individualized treatment rule as well as its (estimated) standard error. The implemented methods are presented in <https://onlinelibrary.wiley.com/doi/10.1111/biom.13864?af=R>.
+This repository contains R functions for the estimation of optimal individualized treatment rules with multistate processes via outcome weighted learning. These functions also provide the estimated value function of an individualized treatment rule as well as its (estimated) standard error. The implemented methods are presented in <http://doi.org/10.1111/biom.13864>.
 
 ## Main Functions
 `itr()` and `V_d()`. Both functions are beta version.
