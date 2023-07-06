@@ -20,7 +20,7 @@ itr <- function(data, feat, w=c(0, 1, 0), tau=3, kernel='linear',
     stop("t1 > t2")
   }
   
-  if(min(w)<=0 | max(w)>=1 | sum(w)>=length(w)){
+  if(min(w)<0 | max(w)>1 | sum(w)>=length(w)){
     stop("min(w)<0 or max(w)>1 or sum(w)>=length(w)")
   }
   
