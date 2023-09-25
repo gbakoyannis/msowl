@@ -1,6 +1,4 @@
-
-
-#Estimator of the value function of an ITR
+# Estimator of the value function of an ITR
 
 V_d <- function(data, w=c(0, 1, 0), tau=3, dec.fun, feat=NULL, SE=TRUE){
   
@@ -18,7 +16,11 @@ V_d <- function(data, w=c(0, 1, 0), tau=3, dec.fun, feat=NULL, SE=TRUE){
     stop("t1 > t2")
   }
   
-  if(min(w)<=0 | max(w)>=1 | sum(w)>=length(w)){
+  # print("check patient preference weights")
+  cond = c(min(w)<0 , max(w)>1 , sum(w)>=length(w))
+  # print(cond)
+  
+  if(any(cond)){ 
     stop("min(w)<0 or max(w)>1 or sum(w)>=length(w)")
   }
   

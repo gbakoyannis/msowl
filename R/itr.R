@@ -1,4 +1,5 @@
 # Estimation of an optimal individualized treatment rule
+library(survival)
 
 itr <- function(data, feat, w=c(0, 1, 0), tau=3, kernel='linear', 
                 lambda=1, sigma=1, SE=TRUE){
