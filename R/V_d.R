@@ -1,5 +1,15 @@
-# Estimator of the value function of an ITR
+#' @title V_d
+#' @description
+#' Estimator of the value function of an ITR
+ 
+#' @param data A data frame of the covariates, treatment, and observed outcome 
+#' @param w Weight Vector for patient preferences of state. 
+#' @param tau  The total time of the trial
+#' @param dec.fun Class of Decision Function ("linear", "rbf", or custom) 
+#' @param feat List of Column Names of Covariate
+#' @param SE Standard Error calculation (bool)
 
+#' @export
 V_d <- function(data, w=c(0, 1, 0), tau=3, dec.fun, feat=NULL, SE=TRUE){
   
   ## state space

@@ -1,0 +1,18 @@
+Package: msowl.itr 
+Type: Package
+Title: Multistate Outcome Weighted Learning 
+Description: Estimate Optimal Individualized Treatment Rules for Survival Data
+Version: 0.0.1.0
+RoxygenNote: 7.2.3
+Authors@R: person("Giorgos","Bakoyiannis", email="gbakoyannis@gmail.com", role = c("aut", "cre"))
+Encoding: UTF-8
+Imports:
+  survival,
+  kernlab,
+  foreign
+LazyData: true
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+License: MIT + file LICENSE
