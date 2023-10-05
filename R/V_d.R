@@ -1,7 +1,15 @@
+#' @title V_d
+#' @description
+#' Estimator of the value function of an ITR
+ 
+#' @param data A data frame of the covariates, treatment, and observed outcome 
+#' @param w Weight Vector for patient preferences of state. 
+#' @param tau  The total time of the trial
+#' @param dec.fun Class of Decision Function ("linear", "rbf", or custom) 
+#' @param feat List of Column Names of Covariate
+#' @param SE Standard Error calculation (bool)
 
-
-#Estimator of the value function of an ITR
-
+#' @export
 V_d <- function(data, w=c(0, 1, 0), tau=3, dec.fun, feat=NULL, SE=TRUE){
   
   ## state space
@@ -18,7 +26,11 @@ V_d <- function(data, w=c(0, 1, 0), tau=3, dec.fun, feat=NULL, SE=TRUE){
     stop("t1 > t2")
   }
   
-  if(min(w)<=0 | max(w)>=1 | sum(w)>=length(w)){
+  # print("check patient preference weights")
+  cond = c(min(w)<0 , max(w)>1 , sum(w)>=length(w))
+  # print(cond)
+  
+  if(any(cond)){ 
     stop("min(w)<0 or max(w)>1 or sum(w)>=length(w)")
   }
   

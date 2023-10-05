@@ -50,6 +50,8 @@ The function `V_d()` computes the estimator the value function of a treatment ru
 
 ## Example
 
+* Run the model on example data via `$ Rscript mowl_example.R`
+
 The artificial dataset `example_data.csv` (included in this repository) contains observations from an illness-death process without recovery. The dataset can be obtained as follows
 ```
 > library(foreign)

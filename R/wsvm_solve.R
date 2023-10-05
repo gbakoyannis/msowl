@@ -1,3 +1,4 @@
+library(kernlab)
 
 #Weighted SVM solver
 #Code adapted from DTRlearn2 package (source code: https://github.com/ychen178/DTRlearn2/blob/master/R/wsvm_solve.R)
@@ -19,6 +20,7 @@ wsvm_solve <-function(X, A, wR, kernel='linear', sigma=0.05, lambda=1, e=1e-7) {
   n = length(A)
   C = 1/(2*n*lambda)
   solution <- tryCatch(ipop(c = rep(-1, n), H = H, A = t(y), b = 0, l = numeric(n), u = C*abs(wR), r = 0), error=function(er) er)
+
   if ("error" %in% class(solution)) {
     return(list(beta0=NA, beta=NA, fit=NA, probability=NA, treatment=NA, sigma=NA, H=NA, alpha1=NA))
   }
